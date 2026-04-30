@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <img src="Images/TopBannerHome.png" 
+  <img src="../Images/TopBannerHome.png" 
         alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
         width="90%"/>
   <!--<title>MOLE — Mimetic Operators Library Enhanced</title>-->
-  <link rel="icon" type="image/png" href="Images/mole-logo.png">
+  <link rel="icon" type="image/png" href="../Images/mole-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
@@ -226,40 +226,6 @@
     .pill-upcoming { background: var(--green-light); color: var(--green-mid); }
     .pill-past { background: var(--bg); color: var(--text-muted); border: 1px solid var(--border); }
 
-    /* ── CALENDAR ── */
-    .cal-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; max-width: 520px; }
-    .cal-nav {
-      display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;
-    }
-    .cal-nav h3 { font-family: var(--display); font-size: 16px; font-weight: 600; }
-    .cal-nav-btn {
-      width: 30px; height: 30px; border-radius: 8px;
-      border: 1px solid var(--border); background: transparent;
-      color: var(--text); font-size: 16px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.1s;
-    }
-    .cal-nav-btn:hover { background: var(--bg); }
-    .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
-    .cal-day-lbl {
-      text-align: center; font-family: var(--mono); font-size: 10px;
-      color: var(--text-muted); padding: 4px 0; letter-spacing: 0.05em;
-    }
-    .cal-cell {
-      aspect-ratio: 1; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px; color: var(--text-muted);
-    }
-    .cal-cell.faded { color: rgba(107,107,103,0.35); }
-    .cal-cell.has-event {
-      background: var(--green-light); color: var(--green-dark);
-      font-weight: 600; cursor: pointer; font-family: var(--display);
-    }
-    .cal-cell.today {
-      background: var(--green); color: #fff;
-      font-weight: 700; font-family: var(--display);
-    }
-
     /* ── LINKS ── */
     .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
     .link-card {
@@ -311,118 +277,41 @@
 <!-- NAV -->
 <nav>
   <a href="https://mole-docs.readthedocs.io/">
-    <img src="Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
+    <img src="../Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
   </a>
   <ul class="nav-links">
-    <li><a href="#Home">Home</a></li>
-    <li><a href="#gallery"><Huge>Gallery</Huge></a></li>
-    <li><a href="Events/events.html"">Events</a></li>
-    <li><a href="#collaborators">Collaborators</a></li>
-    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="https://mole-docs.readthedocs.io/en/main/">Documentation</a></li>
+    <li><a href="../Events/events.html">Events</a></li>
+    <li><a href="../Collaborators/collaborators.html">Collaborators</a></li>
+    <li><a href="../Sponsors/sponsors.html">Sponsors</a></li>
   </ul>
   <!-- <a class="nav-cta" href="https://github.com/csrc-sdsu/mole" target="_blank">GitHub ↗</a> -->
 </nav>
-
-<!-- Home -->
-<section id="Home">
-  <div class="hero">
-    <h1>MOLE Open-Source Software Ecosystem<br></h1>
-    <p class="hero-desc">
-      MOLE implements high-order mimetic difference operators to numerically 
-      solve partial differential equations. It provides discrete analogs of 
-      the most common vector calculus operators: Gradient, Divergence, Laplacian, 
-      and Curl. These operators act on staggered grids (uniform, non-uniform, 
-      and curvilinear) and preserve locally and globally quantities of interests 
-      for systems of conservation laws.<br>
-      The MOLE Open-Source Ecosystem organization was established to support 
-      the MOLE library’s ecosystem as a sustainable, robust, secure, and more 
-      readily available library of high-order mimetic differential operators. 
-      The MOLE OSE serves academic and industrial communities that require 
-      high-performance solvers for PDEs.</p>
-    <!-- NEWS AND UPCOMING EVENTS -->
-     <section id="news">
-        <div class="section-header">
-          <p style="font-family: var(--sans); color:#265059; font-size: 32px; font-weight: 600; margin-bottom: 1px; ">
-            MOLE News and Upcoming Events 
-          </p>
-          <a class="see-all" href="Events/events.html">More Events →</a>
-        </div>
-        <div class="news-grid" id="news-grid"></div>
-     </section>
-    <div class="hero-actions">
-      <a class="btn-primary" href="https://github.com/csrc-sdsu/mole" target="_blank">View on GitHub</a>
-      <a class="btn-outline" href="https://mole-docs.readthedocs.io/" target="_blank">Read the docs</a>
-      <a class="btn-outline" href="https://mole-docs.readthedocs.io/en/main/intros/ose_organization_wrapper.html"
-          target="_blank">MOLE OSE Organization</a>
-      <a class="btn-outline" href="https://mole-docs.readthedocs.io/en/main/intros/contributing_wrapper.html"
-          target="_blank">Contributing to MOLE</a>
-      <a class="btn-outline" href="https://mole-docs.readthedocs.io/en/main/intros/code_of_conduct_wrapper.html"
-          target="_blank">Code of Conduct</a>
-      <a class="btn-outline" href="https://mole-docs.readthedocs.io/en/main/intros/selected_publications_wrapper.html"
-          target="_blank">Selected Publications</a>
-    </div>
-    <!-- <div class="hero-stats">
-      <div class="stat">
-      <div class="stat-num">12+</div>
-      <div class="stat-label">applications</div>
-    </div -->
-  </div>
-</section>
-
 <!-- GALLERY -->
 <section id="gallery">
-  <div class="section-header">
-    <h2>Application gallery</h2>
-    <a class="see-all" href="#">See all →</a>
-  </div>
+  <div class="hero">
+     <div class="hero-badge">APPLICATION GALLERY</div>
+     <h1>Explore MOLE-powered applications</h1>
+     <p class="hero-desc">Discover a curated selection of scientific computing applications built using the MOLE library. Each application demonstrates how MOLE's mimetic discretization techniques can be applied to solve complex PDEs across various domains.</p>
+   </div>
   <div class="filter-row" id="filter-row">
     <button class="filter-btn active" data-tag="all">All</button>
-    <button class="filter-btn" data-tag="pde">PDEs</button>
-    <button class="filter-btn" data-tag="fluid">Fluid dynamics</button>
-    <button class="filter-btn" data-tag="heat">Heat transfer</button>
-    <button class="filter-btn" data-tag="wave">Wave propagation</button>
+    <button class="filter-btn" data-tag="diffusion">Diffusion</button>
+    <button class="filter-btn" data-tag="Turbulence">Turbulence</button>
+    <button class="filter-btn" data-tag="Fluid flow">Fluid flow</button>
   </div>
   <div class="apps-grid" id="apps-grid"></div>
 </section>
 
-<!-- CALENDAR -->
-<section id="calendar">
-  <div class="section-header">
-    <h2>Calendar</h2>
-  </div>
-  <div class="cal-wrap">
-    <div class="cal-nav">
-      <button class="cal-nav-btn" id="cal-prev">&#8249;</button>
-      <h3 id="cal-title"></h3>
-      <button class="cal-nav-btn" id="cal-next">&#8250;</button>
-    </div>
-    <div class="cal-grid" id="cal-grid"></div>
-  </div>
-</section>
-
-<!-- RESOURCES -->
-<section id="resources">
-  <div class="section-header">
-    <h2>Resources &amp; related sites</h2>
-  </div>
-  <div class="links-grid" id="links-grid"></div>
-</section>
-
-<!-- SPONSORS -->
-<section id="sponsors">
-  <div class="section-header">
-    <h2>Sponsors &amp; institutions</h2>
-  </div>
-  <div class="sponsors-row" id="sponsors-row"></div>
-</section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">© 2026 MOLE Project — Open source under BSD license</div>
+  <div class="footer-left">© 2008-2024 San Diego State University Research Foundation (SDSURF)</div>
   <div class="footer-links">
-    <a href="https://github.com/csrc-sdsu/mole" target="_blank">GitHub</a>
-    <a href="#" target="_blank">Documentation</a>
-    <a href="#" target="_blank">Contact</a>
+    <a href="https://www.csrc.sdsu.edu/" target="_blank">CSRC at SDSU</a>"
+    <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
   </div>
 </footer>
 
@@ -430,49 +319,30 @@
   /* ── DATA ── Edit this section to update content ── */
 
   const APPS = [
-    { name: "Diffusion solver", desc: "Mimetic discretization of the heat diffusion equation on irregular grids.", tag: "heat", icon: "🌡", bg: "#E1F5EE" },
-    { name: "Seismic wave simulator", desc: "Acoustic wave propagation for subsurface imaging applications.", tag: "wave", icon: "〰", bg: "#E6F1FB" },
-    { name: "Navier-Stokes 2D", desc: "Incompressible fluid solver preserving discrete divergence-free conditions.", tag: "fluid", icon: "💧", bg: "#EEEDFE" },
-    { name: "Poisson equation", desc: "Electrostatic potential solver using mimetic Laplacian operators.", tag: "pde", icon: "⚡", bg: "#FAEEDA" },
-    { name: "Advection-diffusion", desc: "Transport phenomena on structured and unstructured meshes.", tag: "fluid", icon: "🌊", bg: "#E6F1FB" },
-    { name: "Elasticity solver", desc: "Linear elastic deformation with energy-preserving discretizations.", tag: "pde", icon: "🧱", bg: "#F1EFE8" },
-    { name: "Thermal conduction", desc: "Anisotropic heat transfer in heterogeneous media.", tag: "heat", icon: "🔥", bg: "#FAEEDA" },
-    { name: "Waveguide modes", desc: "EM field modes in waveguide cross-sections.", tag: "wave", icon: "📡", bg: "#EEEDFE" },
+    { name: "Diffusion-reaction solver", 
+    desc: "Fisher equation is used to depict spatial changes in moving cell populations.", 
+    tag: "diffusion", icon: "../Images/CellMovement_Habbal.png" },
+    { name: "Turbulence", 
+    desc: "Turbulent fluid flow behavior between two parallel plates (channel flow).", 
+    tag: "Turbulence", icon: "../Images/Turbulence4kNS.png" },
+    { name: "Ocean Model", 
+    desc: "General Circulation Curvilinear Ocean Model (GCCOM2).", 
+    tag: "Fluid flow", icon: "../Images/GCCOM_simulation.png" },
+    { name: "Vortex Shedding", 
+    desc: "2D Non-hydrostatic incompressible flow in a channel.", 
+    tag: "Fluid flow", icon: "../Images/VortexShedding.png" },
   ];
-
-  const NEWS = [
-    { month: "Jun", day: "12", title: "MOLE Workshop 2026", loc: "San Diego, CA", type: "Workshop", upcoming: true },
-    { month: "Aug", day: "5",  title: "SIAM Annual Meeting", loc: "Boston, MA", type: "Conference", upcoming: true },
-    { month: "Mar", day: "20", title: "MOLE v2.1 release webinar", loc: "Online", type: "Webinar", upcoming: false },
-    { month: "Nov", day: "8",  title: "Scientific Computing Symposium", loc: "Austin, TX", type: "Conference", upcoming: false },
-  ];
-
-  const LINKS = [
-    { name: "GitHub repository", url: "https://github.com/csrc-sdsu/mole", display: "github.com/csrc-sdsu/mole", icon: "🐙" },
-    { name: "Documentation", url: "#", display: "mole-lib.readthedocs.io", icon: "📖" },
-    { name: "MATLAB File Exchange", url: "https://mathworks.com/matlabcentral", display: "mathworks.com/matlabcentral", icon: "🔢" },
-    { name: "CSRC at SDSU", url: "https://csrc.sdsu.edu", display: "csrc.sdsu.edu", icon: "🏫" },
-    { name: "arXiv papers", url: "https://arxiv.org", display: "arxiv.org", icon: "📄" },
-    { name: "Community forum", url: "#", display: "discourse.mole-lib.org", icon: "💬" },
-  ];
-
-  const SPONSORS = [
-    "San Diego State University", "NSF", "CSRC", "Department of Mathematics", "CONACYT", "UC San Diego"
-  ];
-
-  /* Days in a given month (0-indexed) that have events — for calendar highlighting */
-  const EVENT_DAYS = { 5: [12] }; /* month 5 = June */
 
   /* ── RENDER: APPS ── */
   function renderApps(tag) {
     const list = tag === 'all' ? APPS : APPS.filter(a => a.tag === tag);
     document.getElementById('apps-grid').innerHTML = list.map(a => `
-      <div class="app-card">
-        <div class="app-icon" style="background:${a.bg}">${a.icon}</div>
+     <a href="${a.page || '#'}" class="app-card" target="_blank">
+       <img src="${a.icon}" alt="${a.name}" height="25"/>
         <div class="app-name">${a.name}</div>
         <div class="app-desc">${a.desc}</div>
         <span class="app-tag">${a.tag}</span>
-      </div>
+      </a>
     `).join('');
   }
 
@@ -484,87 +354,8 @@
     renderApps(btn.dataset.tag);
   });
 
-  /* ── RENDER: NEWS ── */
-  function renderNews() {
-    document.getElementById('news-grid').innerHTML = NEWS.map(ev => `
-      <div class="news-card">
-        <div class="news-datebox">
-          <span class="month">${ev.month}</span>
-          <span class="day">${ev.day}</span>
-        </div>
-        <div class="news-info">
-          <div class="news-title">${ev.title}</div>
-          <div class="news-meta">${ev.loc} · ${ev.type}</div>
-          <span class="news-pill ${ev.upcoming ? 'pill-upcoming' : 'pill-past'}">${ev.upcoming ? 'Upcoming' : 'Past'}</span>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  /* ── RENDER: CALENDAR ── */
-  let calDate = new Date(2026, 3, 1); /* Start at April 2026 */
-
-  function renderCalendar() {
-    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const dayLabels = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    const y = calDate.getFullYear(), m = calDate.getMonth();
-    document.getElementById('cal-title').textContent = `${months[m]} ${y}`;
-    const firstDay = new Date(y, m, 1).getDay();
-    const daysInMonth = new Date(y, m + 1, 0).getDate();
-    const prevDays = new Date(y, m, 0).getDate();
-    const today = new Date();
-    const eventDaysThisMonth = EVENT_DAYS[m] || [];
-
-    let html = dayLabels.map(d => `<div class="cal-day-lbl">${d}</div>`).join('');
-    for (let i = 0; i < firstDay; i++) {
-      html += `<div class="cal-cell faded">${prevDays - firstDay + i + 1}</div>`;
-    }
-    for (let d = 1; d <= daysInMonth; d++) {
-      const isToday = d === today.getDate() && m === today.getMonth() && y === today.getFullYear();
-      const hasEvent = eventDaysThisMonth.includes(d);
-      const cls = isToday ? 'today' : hasEvent ? 'has-event' : '';
-      html += `<div class="cal-cell ${cls}">${d}</div>`;
-    }
-    const remaining = 42 - firstDay - daysInMonth;
-    for (let d = 1; d <= remaining; d++) {
-      html += `<div class="cal-cell faded">${d}</div>`;
-    }
-    document.getElementById('cal-grid').innerHTML = html;
-  }
-
-  document.getElementById('cal-prev').addEventListener('click', () => {
-    calDate = new Date(calDate.getFullYear(), calDate.getMonth() - 1, 1);
-    renderCalendar();
-  });
-  document.getElementById('cal-next').addEventListener('click', () => {
-    calDate = new Date(calDate.getFullYear(), calDate.getMonth() + 1, 1);
-    renderCalendar();
-  });
-
-  /* ── RENDER: LINKS ── */
-  function renderLinks() {
-    document.getElementById('links-grid').innerHTML = LINKS.map(l => `
-      <a class="link-card" href="${l.url}" target="_blank" rel="noopener">
-        <div class="link-icon">${l.icon}</div>
-        <div class="link-name">${l.name}</div>
-        <div class="link-url">${l.display}</div>
-      </a>
-    `).join('');
-  }
-
-  /* ── RENDER: SPONSORS ── */
-  function renderSponsors() {
-    document.getElementById('sponsors-row').innerHTML = SPONSORS.map(s =>
-      `<div class="sponsor-pill">${s}</div>`
-    ).join('');
-  }
-
   /* ── INIT ── */
-  renderApps('all');
-  renderNews();
-  renderCalendar();
-  renderLinks();
-  renderSponsors();
+  renderApps('all')
 </script>
 </body>
 </html>
