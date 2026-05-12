@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <img src="../../Images/TopBannerHome.png" 
+ <img src="../../Images/TopBannerHome.png" 
         alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
         width="90%"/>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,8 +56,8 @@
     .hero-badge {
       display: inline-flex; align-items: center; gap: 6px;
       font-family: var(--mono); font-size: 12px; letter-spacing: 0.05em;
-      /* padding: 5px 12px; border-radius: 99px; */
-      background: var(--green-light); color: var(--green-mid);
+      padding: 5px 12px; border-radius: 99px;
+      background: var(--green-light); color: var(--bg);
       border: 1px solid rgba(29,158,117,0.2);
       margin-bottom: 1.5rem;
     }
@@ -179,69 +179,51 @@
     <li><a href="../../Sponsors/sponsors.html">Sponsors</a></li>
   </ul>
 </nav>
-
 <!-- Home -->
 <section id="Home">
   <div class="hero">
-    <h1>A Tutorial on The Mimetic Operators Library Enhanced (MOLE)</h1>
-    <h2>May 12, 2026, from 10 AM to 12:00 PM. U.S. Pacific Daylight Saving Time.</h2>
-    <h2><span style="color:rgb(116, 11, 11)">CSRC Conference Room (Room GMCS 206D),</span> San Diego State University, California</h2>
+    <h1>MOLE.jl: Julia implementation of MOLE<br></h1>
+    <h2>August 10-15, 2026 - Johannes Gutenberg University Mainz, Germany</h2>
+    <h2>Presenter: <b>Prof. Valeria Barra</b>, San Diego State University.</h2>
   </div> 
+   <div class="hero-badge">Minisymposia Presentation</div>
   <table>
-    <tr>
-      <td style="width: 25%; background-color: #ffffff; text-align: center; vertical-align: middle;
-            height: 50px;">
-        <img src="../../Images/burgers.png" alt="2026 MUG Meeting" width="100%"/></td>
-      <td style="width: 25%; background-color: #ffffff; text-align: center; vertical-align: middle;
-            height: 50px;">
-        <img src="../../Images/wave2D.png" alt="2026 MUG Meeting" width="100%"/></td>
-              <td style="width: 20%; background-color: #ffffff; text-align: center; vertical-align: middle;
-            height: 50px;">
-        <img src="../../Images/4thOrder2.png" alt="2026 MUG Meeting" width="100%"/></td>
-      <td style="width: 20%; background-color: #FFFFFF; text-align: center;"">
-        <a class="btn-outline" href=https://forms.gle/7KZ8t3zCUxu7f6vB7" target="_blank">
-      <img src="https://mole-ose.org/Images/MLTQRC20260512.png" alt="MOLE Tutorial Sprint 2026 Registration" 
-        height="100%" style="vertical-align: middle;"/>
-    </a>   
+    <tr align="center">
+      <td style="width: 20%; background-color: #ffffff; text-align: center; vertical-align: middle;
+  height: 50px;">
+        <a href="https://juliacon.org/2026/" target="_blank">
+          <img src="../../Images/juliacon2026.png" alt="2026 MUG Meeting">
+        </a>
+      </td>
+      <td style="width: 60%; background-color: #FFFFFF; text-align: center;">
+          <h1>JuliaCon Global 2026</h1>
+          <h2>Conference on the Julia programming language.</h2>
       </td>
     </tr>
   </table>
-  <div class="hero-actions">
+
+  <div class="hero-desc"> 
+    <br>
+    Mimetic discretization methods provide compatible numerical approximations for partial 
+    differential equations (PDEs) that mimic desired properties of the model, e.g., 
+    conservation laws, symmetry and positivity of solutions, duality and self-adjointness 
+    of differential operators, and exact mathematical identities of the vector and tensor 
+    calculus by construction. The Mimetic Operators Library Enhanced  (MOLE) is an open-source 
+    software library that implements mimetic difference operators and associated tools for robust, 
+    accurate, and physically consistent numerical solutions of PDEs. Originally developed in 
+    MATLAB/Octave and C++, we present here its Julia implementation: MOLE.jl.<br><br>
+    MOLE.jl offers ease-of-use via idiomatic and user-extensible Julia APIs, integration with
+    the Julia ecosystem tooling, modularity, and composability of differential operators. 
+    This new implementation broadens MOLE’s user base and allows for performance portability
+    while maintaining a consistent mathematical and software abstraction. We will show 
+    representative use cases that illustrate how MOLE.jl supports rapid prototyping for 
+    compatible simulations of PDE models across multiple application domains.
 
   </div>
-  <div class="hero-desc">
-   The Mimetics Operator Library Enhanced (MOLE) is a high-quality (C++ & MATLAB/Octave) 
-   library that implements high-order mimetic difference operators to numerically solve 
-   partial differential equations. It provides discrete analogs of the most common vector 
-   calculus operators: Gradient, Divergence, Laplacian, and Curl. These operators (highly 
-   sparse matrices) act on staggered grids (uniform, non-uniform, curvilinear) and preserve 
-   locally and globally quantities of interest for systems of conservation laws.<br> 
-   This tutorial will cover an introduction to MOLE mimetic difference operators; gradient, 
-   divergence, laplacian and curl for C++ and MATLAB/Octave users.  Attendants will learn 
-   how to use the MOLE library  through examples, and also review the installation and 
-   guidelines to contribute to the MOLE library. Please, read the Getting Started Section 
-   in <a href="https://mole-docs.readthedocs.io/" target="_blank">mole-docs.readthedocs.io/</a> and install or clone the MOLE library. Installation support 
-   will be provided 90-minutes prior to the beginning of the tutorial.<br> 
-   The tutorial is free and will be held in person at <span style="color:rgb(116, 11, 11);">CSRC Conference Room (Room GMCS 206D)</span>, at SDSU, 
-   on May 12, 2026 from 10 AM to 12:00 PM U.S. PT, and also online via Zoom. To register for 
-   this tutorial, in person or online, please fill out <a href="https://forms.gle/7KZ8t3zCUxu7f6vB7">
-    the MOLE Tutorial Registration Form.</a><br><br>
-    <ul>
-      <li>For questions about this MOLE tutorial, please contact: jcastillo@sdsu.edu</i>
-      <li>A map of <a href="https://sacd.sdsu.edu/_resources/files/map-full-clr-print.pdf">SDSU Campus</a></li>
-      <li>A printable <a href="../PDFs/MLT20260512-flyer.pdf">flyer of this MOLE Tutorial</a></li>
-    </ul>
-  </div>
-      <div class="hero-actions">
-      <a class="btn-outline" href="https://forms.gle/1s4L8qUT7Jt18YVi9" target="_blank">
-        Submit Feedback</a>
-      <a class="btn-primary" href="">Post Meeting Materials (comming soon)</a>
-      <a class="btn-primary" href="https://drive.google.com/file/d/1CwnWvW0_a869zns5nw_HPN8cywJXiuIi/view?usp=drive_link">
-        Tutorial Video Recording</a>
+    <div class="hero-actions">
+      <a class="btn-primary" href="Materials/mug_materials.html">Post Meeting Materials</a>
     </div>
 </section>
-
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">© 2008-2024 San Diego State University Research Foundation (SDSURF)</div>
