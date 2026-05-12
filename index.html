@@ -267,7 +267,7 @@
     <!-- NEWS AND UPCOMING EVENTS -->
      <section id="events">
           <p style="font-family: var(--sans); color:#265059; font-size: 32px; font-weight: 600; ">
-            MOLE News and Upcoming Events 
+            MOLE News and Events 
           </p>
          <div class="news-grid" id="news-grid"></div><br>
          <div class="events-grid" id="events-grid"></div><br>
@@ -306,12 +306,15 @@
 <script>
   /* ── DATA ── Edit this section to update content ── */
   const EVENTS = [
+    { month: "Aug", day: "10-15",  title: "MOLE.jl: Julia implementation of MOLE", 
+    loc: "JuliaCon 2026, Mains, Germany", upcoming: true, 
+    url: "Events/Upcoming/Juliacon2026.html" },
+    { month: "May", day: "12",  title: "MOLE Library Tutorial", 
+    loc: "San Diego State University, CA", upcoming: false, 
+    url: "Events/Past/MLTSP20260512.html" },
     { month: "Apr", day: "30", title: "MOLE Users's Group Meeting 2026", 
     loc: "San Diego State University, CA", upcoming: false, 
     url: "Events/Past/MUG20260430.html" },
-    { month: "May", day: "12",  title: "MOLE Library Tutorial", 
-    loc: "San Diego State University, CA", upcoming: true, 
-    url: "Events/Upcoming/MLTSP20260512.html" },
   ];
   /* ── DATA ── Edit this section to update content ── */
   const NEWS = [

@@ -1,0 +1,24 @@
+# Python related
+__pycache__/
+*.py[cod]
+.env
+.venv
+env/
+venv/
+*.egg-info/
+
+# IDE and editor files
+.vscode/
+.idea/
+.vim/
+.cache/
+.ccls-cache/
+*.swp
+*~
+
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
