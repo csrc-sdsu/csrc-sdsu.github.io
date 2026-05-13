@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <img src="../../Images/TopBannerHome.png" 
-        alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
-        width="90%"/>
+  <title>MOLE — Mimetic Operators Library Enhanced</title>
+  <link rel="icon" type="image/png" href="https://mole-ose.org/Images/mole-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
@@ -154,23 +153,55 @@
     .footer-links a:hover { color: var(--text); }
 
     /* ── RESPONSIVE NAV ── */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--text);
+      padding: 4px 10px;
+      line-height: 1;
+      transition: background 0.15s;
+    }
+    .nav-hamburger:hover { background: var(--surface); }
+
     @media (max-width: 768px) {
-      .nav-links { display: none; }
+      nav { padding: 0 1.5rem; position: relative; }
+      .nav-hamburger { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: rgba(247,246,242,0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links a { font-size: 16px; }
       .hero { padding: 4rem 1.5rem 3rem; }
       section { padding: 2.5rem 1.5rem; }
-      nav { padding: 0 1.5rem; }
       footer { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
+<!--<title>MOLE — Mimetic Operators Library Enhanced</title>-->
+<img src="../../Images/TopBannerHome.png" 
+      alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+      width="100%"/>
 
 <!-- NAV -->
 <nav>
   <a href="https://mole-docs.readthedocs.io/">
     <img src="../../Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="../../index.html">Home</a></li>
     <li><a href="../../Gallery/gallery.html">Gallery</a></li>
     <li><a href="../../Events/events.html">Events</a></li>
@@ -178,7 +209,9 @@
     <li><a href="../../Collaborators/collaborators.html">Collaborators</a></li>
     <li><a href="../../Sponsors/sponsors.html">Sponsors</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
 </nav>
+
 <!-- Home -->
 <section id="Home">
   <div class="hero">
@@ -189,10 +222,9 @@
    <div class="hero-badge">Minisymposia Presentation</div>
   <table>
     <tr align="center">
-      <td style="width: 20%; background-color: #ffffff; text-align: center; vertical-align: middle;
-  height: 50px;">
+      <td style="width: 20%; background-color: #ffffff; text-align: center; vertical-align: middle; height: 50px;">
         <a href="https://juliacon.org/2026/" target="_blank">
-          <img src="../../Images/juliacon2026.png" alt="2026 MUG Meeting">
+          <img src="../../Images/juliacon2026.png" alt="JuliaCon 2026">
         </a>
       </td>
       <td style="width: 60%; background-color: #FFFFFF; text-align: center;">

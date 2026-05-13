@@ -1,0 +1,90 @@
+6c6,9
+<   <title>MOLE — Mimetic Operators Library Enhanced</title>
+---
+>   <img src="Images/TopBannerHome.png" 
+>         alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+>         width="90%"/>
+>   <!--<title>MOLE — Mimetic Operators Library Enhanced</title>-->
+221,234d223
+<     .nav-hamburger {
+<       display: none;
+<       background: none;
+<       border: 1px solid var(--border-strong);
+<       border-radius: 8px;
+<       cursor: pointer;
+<       font-size: 20px;
+<       color: var(--text);
+<       padding: 4px 10px;
+<       line-height: 1;
+<       transition: background 0.15s;
+<     }
+<     .nav-hamburger:hover { background: var(--surface); }
+< 
+236,251c225
+<       nav { padding: 0 1.5rem; position: relative; }
+<       .nav-hamburger { display: block; }
+<       .nav-links {
+<         display: none;
+<         position: absolute;
+<         top: 64px; left: 0; right: 0;
+<         background: rgba(247,246,242,0.97);
+<         backdrop-filter: blur(12px);
+<         border-bottom: 1px solid var(--border);
+<         flex-direction: column;
+<         align-items: flex-start;
+<         padding: 1rem 1.5rem;
+<         gap: 1rem;
+<       }
+<       .nav-links.nav-open { display: flex; }
+<       .nav-links a { font-size: 16px; }
+---
+>       .nav-links { display: none; }
+253a228
+>       nav { padding: 0 1.5rem; }
+260,263d234
+< <img src="Images/TopBannerHome.png" 
+<       alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+<       width="100%"/>
+< 
+269c240
+<   <ul class="nav-links" id="nav-links">
+---
+>   <ul class="nav-links">
+273c244
+<     <li><a href="Events/events.html">Events</a></li>
+---
+>     <li><a href="Events/events.html"">Events</a></li>
+277d247
+<   <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+300c270
+<             MOLE News and Upcoming Events 
+---
+>             MOLE News and Events 
+338a309,314
+>     { month: "Aug", day: "10-15",  title: "MOLE.jl: Julia implementation of MOLE", 
+>     loc: "JuliaCon 2026, Mains, Germany", upcoming: true, 
+>     url: "Events/Upcoming/Juliacon2026.html" },
+>     { month: "May", day: "12",  title: "MOLE Library Tutorial", 
+>     loc: "San Diego State University, CA", upcoming: false, 
+>     url: "Events/Past/MLTSP20260512.html" },
+342,344d317
+<     { month: "May", day: "12",  title: "MOLE Library Tutorial", 
+<     loc: "San Diego State University, CA", upcoming: true, 
+<     url: "Events/Upcoming/MLTSP20260512.html" },
+385,400d357
+< 
+<   /* ── HAMBURGER MENU ── */
+<   const hamburger = document.getElementById('nav-hamburger');
+<   const navLinks = document.getElementById('nav-links');
+<   hamburger.addEventListener('click', function () {
+<     const isOpen = navLinks.classList.toggle('nav-open');
+<     hamburger.setAttribute('aria-expanded', isOpen);
+<     hamburger.textContent = isOpen ? '\u2715' : '\u2630';
+<   });
+<   navLinks.querySelectorAll('a').forEach(function (link) {
+<     link.addEventListener('click', function () {
+<       navLinks.classList.remove('nav-open');
+<       hamburger.setAttribute('aria-expanded', 'false');
+<       hamburger.textContent = '\u2630';
+<     });
+<   });

@@ -143,27 +143,60 @@
     .footer-links a:hover { color: var(--text); }
 
     /* ── RESPONSIVE NAV ── */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--text);
+      padding: 4px 10px;
+      line-height: 1;
+      transition: background 0.15s;
+    }
+    .nav-hamburger:hover { background: var(--surface); }
+
     @media (max-width: 768px) {
-      .nav-links { display: none; }
+      nav { padding: 0 1.5rem; position: relative; }
+      .nav-hamburger { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: rgba(247,246,242,0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links a { font-size: 16px; }
       .hero { padding: 4rem 1.5rem 3rem; }
       section { padding: 2.5rem 1.5rem; }
-      nav { padding: 0 1.5rem; }
       footer { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
+<!--<title>MOLE — Mimetic Operators Library Enhanced</title>-->
+<img src="../../Images/TopBannerHome.png" 
+      alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+      width="100%"/>
+
 <!-- NAV -->
 <nav>
   <a href="https://mole-docs.readthedocs.io/">
     <img src="../../Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="../../index.html">Home</a></li>
     <li><a href="../gallery.html">Gallery</a></li>
   </ul>
-  <!-- <a class="nav-cta" href="https://github.com/csrc-sdsu/mole" target="_blank">GitHub ↗</a> -->
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
 </nav>
 <!-- Application Home -->
 <section id="Home">
@@ -226,6 +259,24 @@
     <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
   </div>
 </footer>
+
+<script>
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.textContent = isOpen ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    });
+  });
+</script>
 
 </body>
 </html>

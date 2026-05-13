@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <img src="../../Images/TopBannerHome.png" 
-        alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
-        width="90%"/>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
@@ -154,23 +151,56 @@
     .footer-links a:hover { color: var(--text); }
 
     /* ── RESPONSIVE NAV ── */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--text);
+      padding: 4px 10px;
+      line-height: 1;
+      transition: background 0.15s;
+    }
+    .nav-hamburger:hover { background: var(--surface); }
+
     @media (max-width: 768px) {
-      .nav-links { display: none; }
+      nav { padding: 0 1.5rem; position: relative; }
+      .nav-hamburger { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        background: rgba(247,246,242,0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links a { font-size: 16px; }
       .hero { padding: 4rem 1.5rem 3rem; }
       section { padding: 2.5rem 1.5rem; }
-      nav { padding: 0 1.5rem; }
       footer { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
+<!--<title>MOLE — Mimetic Operators Library Enhanced</title>-->
+<img src="../../Images/TopBannerHome.png" 
+      alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+      width="100%"/>
+
 <!-- NAV -->
 <nav>
   <a href="https://mole-docs.readthedocs.io/">
     <img src="../../Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="../../index.html">Home</a></li>
     <li><a href="../../Gallery/gallery.html">Gallery</a></li>
     <li><a href="../../Events/events.html">Events</a></li>
@@ -178,6 +208,7 @@
     <li><a href="../../Collaborators/collaborators.html">Collaborators</a></li>
     <li><a href="../../Sponsors/sponsors.html">Sponsors</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
 </nav>
 
 <!-- Home -->
@@ -191,24 +222,22 @@
     <tr>
       <td style="width: 25%; background-color: #ffffff; text-align: center; vertical-align: middle;
             height: 50px;">
-        <img src="../../Images/burgers.png" alt="2026 MUG Meeting" width="100%"/></td>
+          <img src="../../Images/burgers.png" alt="2026 MUG Meeting" width="100%"/></td>
       <td style="width: 25%; background-color: #ffffff; text-align: center; vertical-align: middle;
             height: 50px;">
-        <img src="../../Images/wave2D.png" alt="2026 MUG Meeting" width="100%"/></td>
-              <td style="width: 20%; background-color: #ffffff; text-align: center; vertical-align: middle;
+          <img src="../../Images/wave2D.png" alt="2026 MUG Meeting" width="100%"/></td>
+      <td style="width: 25%; background-color: #ffffff; text-align: center; vertical-align: middle;
             height: 50px;">
-        <img src="../../Images/4thOrder2.png" alt="2026 MUG Meeting" width="100%"/></td>
-      <td style="width: 20%; background-color: #FFFFFF; text-align: center;"">
+          <img src="../../Images/4thOrder2.png" alt="2026 MUG Meeting" width="100%"/></td>
+      <td style="width: 25%; background-color: #FFFFFF; text-align: center;"">
         <a class="btn-outline" href=https://forms.gle/7KZ8t3zCUxu7f6vB7" target="_blank">
-      <img src="https://mole-ose.org/Images/MLTQRC20260512.png" alt="MOLE Tutorial Sprint 2026 Registration" 
-        height="100%" style="vertical-align: middle;"/>
-    </a>   
+          <img src="https://mole-ose.org/Images/MLTQRC20260512.png" alt="MOLE Tutorial Sprint 2026 Registration" 
+              height="100%" style="vertical-align: middle;"/>
+        </a>   
       </td>
     </tr>
   </table>
-  <div class="hero-actions">
-
-  </div>
+  
   <div class="hero-desc">
    The Mimetics Operator Library Enhanced (MOLE) is a high-quality (C++ & MATLAB/Octave) 
    library that implements high-order mimetic difference operators to numerically solve 
@@ -231,16 +260,17 @@
     <ul>
       <li>For questions about this MOLE tutorial, please contact: jcastillo@sdsu.edu</i>
       <li>A map of <a href="https://sacd.sdsu.edu/_resources/files/map-full-clr-print.pdf">SDSU Campus</a></li>
-      <li>A printable <a href="../PDFs/MLT20260512-flyer.pdf">flyer of this MOLE Tutorial</a></li>
+      <li>A printable <a href="../../PDFs/MLT20260512-flyer.pdf">flyer of this MOLE Tutorial</a></li>
     </ul>
   </div>
-      <div class="hero-actions">
-      <a class="btn-outline" href="https://forms.gle/1s4L8qUT7Jt18YVi9" target="_blank">
+  <div class="hero-actions">
+      <!-- a class="btn-outline" href="https://forms.gle/1s4L8qUT7Jt18YVi9" target="_blank" -->
+    <a class="btn-outline" href="https://forms.gle/1s4L8qUT7Jt18YVi9" target="_blank">
         Submit Feedback</a>
-      <a class="btn-primary" href="">Post Meeting Materials (comming soon)</a>
-      <a class="btn-primary" href="https://drive.google.com/file/d/1CwnWvW0_a869zns5nw_HPN8cywJXiuIi/view?usp=drive_link">
-        Tutorial Video Recording</a>
-    </div>
+    <a class="btn-primary" href="Materials/TUT2026/MOLETutorialWithMDIntro.pdf">Post Meeting Materials</a>
+    <a class="btn-primary" href="https://drive.google.com/file/d/1CwnWvW0_a869zns5nw_HPN8cywJXiuIi/view?usp=drive_link">
+         Tutorial Video Recording</a>
+  </div>
 </section>
 
 
@@ -252,6 +282,24 @@
     <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
   </div>
 </footer>
+
+<script>
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.textContent = isOpen ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    });
+  });
+</script>
 
 </body>
 </html>
