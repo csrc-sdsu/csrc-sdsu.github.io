@@ -40,7 +40,9 @@
       Upcoming MOLE Events </p>
   </div>
   <div class="events-grid" id="events-grid"></div>
+  <!-- filter-row: reserved for future event-type filtering
   <div class="filter-row" id="filter-row"></div>
+  -->
 </section>
 
 <!-- PAST EVENTS -->
@@ -60,7 +62,6 @@
     <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
   </div>
 </footer>
-</section>
 
 <script>
   /* ── DATA ── Edit this section to update content ── */
@@ -83,6 +84,8 @@
     url: "Past/SC2520251116.html" },
   ];
 
+  /* Filter for future implementation */
+  /* filter-row listener: reserved for future event-type filtering
   document.getElementById('filter-row').addEventListener('click', e => {
     const btn = e.target.closest('.filter-btn');
     if (!btn) return;
@@ -90,6 +93,7 @@
     btn.classList.add('active');
     renderEvents(btn.dataset.tag);
   });
+  */
 
 /* ── RENDER: EVENTS ── */
   function renderEvents() {
@@ -109,7 +113,7 @@
 
 /* ── RENDER: PAST EVENTS ── */
   function renderPastEvents() {
-    document.getElementById('pevents-grid').innerHTML = PEVENTS.filter(ev => !ev.upcoming).map(ev => `
+    document.getElementById('pevents-grid').innerHTML = PEVENTS.map(ev => `
       <div class="events-card">
         <div class="events-datebox">
           <span class="month">${ev.month}</span>
