@@ -179,84 +179,6 @@ section { padding: 2.5rem 2.5rem; }
 }
 
 
-/* ── UPCOMING EVENTS GRID ── */
-.events-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-@media (max-width: 640px) { .events-grid { grid-template-columns: 1fr; } }
-.events-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 1.25rem 1.5rem;
-  display: flex; gap: 16px; align-items: flex-start;
-  transition: border-color 0.15s;
-}
-.events-card:hover { border-color: var(--border-strong); }
-.events-datebox {
-  min-width: 52px; height: 56px; border-radius: 10px;
-  background: var(--green-light); border: 1px solid rgba(29,158,117,0.2);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.events-datebox .month {
-  font-family: var(--mono); font-size: 16px; font-weight: 500;
-  color: var(--bg); letter-spacing: 0.08em; text-transform: uppercase;
-}
-.events-datebox .day {
-  font-family: var(--display); font-size: 18px; font-weight: 700;
-  color: var(--green-dark); line-height: 1;
-}
-.events-info { flex: 1; }
-.events-title { font-family: var(--display); font-size: 20px; font-weight: 600; margin-bottom: 4px; }
-.events-meta { font-size: 18px; color: var(--text-muted); font-family: var(--mono); }
-.events-pill {
-  display: inline-block; margin-top: 8px;
-  font-family: var(--mono); font-size: 18px; padding: 3px 10px; border-radius: 99px;
-}
-.pill-upcoming { background: var(--green-light); color: var(--bg); }
-.pill-past { background: var(--bg); color: var(--green-dark); border: 1px solid var(--border); }
-
-/* ── PAST EVENTS GRID ── */
-.pevents-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-@media (max-width: 640px) { .pevents-grid { grid-template-columns: 1fr; } }
-.pevents-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 1.25rem 1.5rem;
-  display: flex; gap: 16px; align-items: flex-start;
-  transition: border-color 0.15s;
-}
-.pevents-card:hover { border-color: var(--border-strong); }
-.pevents-datebox {
-  min-width: 52px; height: 56px; border-radius: 10px;
-  background: var(--green-light); border: 1px solid rgba(29,158,117,0.2);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.pevents-datebox .month {
-  font-family: var(--mono); font-size: 16px; font-weight: 500;
-  color: var(--bg); letter-spacing: 0.08em; text-transform: uppercase;
-}
-.pevents-datebox .day {
-  font-family: var(--display); font-size: 18px; font-weight: 700;
-  color: var(--green-dark); line-height: 1;
-}
-.pevents-info { flex: 1; }
-.pevents-title { font-family: var(--display); font-size: 20px; font-weight: 600; margin-bottom: 4px; }
-.pevents-meta { font-size: 18px; color: var(--text-muted); font-family: var(--mono); }
-.pevents-pill {
-  display: inline-block; margin-top: 8px;
-  font-family: var(--mono); font-size: 18px; padding: 3px 10px; border-radius: 99px;
-}
-
-.filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.filter-btn {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.03em;
-  padding: 5px 14px; border-radius: 99px; cursor: pointer;
-  border: 1px solid var(--border-strong); background: transparent;
-  color: var(--text-muted); transition: all 0.15s;
-}
-.filter-btn:hover { border-color: var(--green); color: var(--green); }
-.filter-btn.active {
-  background: var(--green); color: #fff; border-color: var(--green);
-}
-
 /* ── NEWS GRID ── */
 .news-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
 @media (max-width: 640px) { .news-grid { grid-template-columns: 1fr; } }
@@ -272,7 +194,7 @@ section { padding: 2.5rem 2.5rem; }
 .news-meta { font-size: 18px; color: var(--text-muted); font-family: var(--mono); }
 
 /* ── EVENTS GRID ── */
-.events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.events-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
 @media (max-width: 640px) { .events-grid { grid-template-columns: 1fr; } }
 .events-card {
   background: var(--surface); border: 1px solid var(--border);

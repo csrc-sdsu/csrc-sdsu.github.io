@@ -49,15 +49,14 @@
     <p style="font-family: var(--sans); color:#265059; font-size: 32px; font-weight: 600; margin-bottom: 1px; ">
       Past MOLE Events </p>
   </div>
-  <div class="pevents-grid" id="pevents-grid"></div>
-  <div class="filter-row" id="filter-row"></div>
+  <div class="events-grid" id="pevents-grid"></div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">© 2008-2024 San Diego State University Research Foundation (SDSURF)</div>
   <div class="footer-links">
-    <a href="https://www.csrc.sdsu.edu/" target="_blank">CSRC at SDSU</a>"
+    <a href="https://www.csrc.sdsu.edu/" target="_blank">CSRC at SDSU</a>
     <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
   </div>
 </footer>
@@ -111,14 +110,14 @@
 /* ── RENDER: PAST EVENTS ── */
   function renderPastEvents() {
     document.getElementById('pevents-grid').innerHTML = PEVENTS.filter(ev => !ev.upcoming).map(ev => `
-      <div class="pevents-card">
-        <div class="pevents-datebox">
+      <div class="events-card">
+        <div class="events-datebox">
           <span class="month">${ev.month}</span>
           <span class="day">${ev.day}</span>
         </div>
-        <div class="pevents-info">
-          <div class="pevents-title"><a href="${ev.url}" target="_blank">${ev.title}</a></div>
-          <div class="pevents-meta">${ev.loc}</div>
+        <div class="events-info">
+          <div class="events-title"><a href="${ev.url}" target="_blank">${ev.title}</a></div>
+          <div class="events-meta">${ev.loc}</div>
         </div>
       </div>
     `).join('');
