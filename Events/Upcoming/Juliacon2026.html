@@ -85,6 +85,22 @@
     <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
   </div>
 </footer>
-
+<script>
+    /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.textContent = isOpen ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    });
+  });
+</script>
 </body>
 </html>
