@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOLE Users' Group Meeting 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css">
+
+</head>
+<body>
+
+<!--<title>MOLE — Mimetic Operators Library Enhanced</title>-->
+<img src="../../Images/TopBannerHome.png" 
+      alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+      width="100%"/>
+
+<!-- NAV -->
+<nav>
+  <a href="https://mole-docs.readthedocs.io/">
+    <img src="../../Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../Gallery/gallery.html">Gallery</a></li>
+    <li><a href="../../Events/events.html">Events</a></li>
+    <li><a href="https://mole-docs.readthedocs.io/en/main/">Documentation</a></li>
+    <li><a href="../../Collaborators/collaborators.html">Collaborators</a></li>
+    <li><a href="../../Sponsors/sponsors.html">Sponsors</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+</nav>
+
+<!-- Home -->
+<section id="Home">
+  <div class="hero">
+  <h2>Invited Presentation at:</h2>
+  <h1><a href="https://www.csrc.sdsu.edu/events/conferences/panam2026/" target="_blank">PanAm 2026</a>: X Pan American Workshop in </h1>
+    <h1>Applied and Computational Mathematics/</h1>
+    <h1>Computational Science and Engineering <br></h1>
+    <h2>National Polytechnic School, Quito, Ecuador</h2>
+    <h2>June 15-19, 2026. </h2>
+  </div> 
+
+  <div class="hero-desc">
+    <h2>High Order Mimetic Differences and Applications</h2>
+    <h2><i>Prof. Jose Castillo, SDSU - CSRC</i></h2>
+    <b><u>Abstract:</u></b><br>
+    Mimetic differences operators have been used more and more frequently to construct numerical
+schemes for solving partial differential equations with variable degree of success. There are
+many researches currently active in this area pursuing different approaches to achieve this goal
+and many algorithms have been developed along these lines. Loosely speaking, "mimetic
+methods" have discrete structures that mimic vector calculus identities and theorems. These
+make the numerical schemes based on mimetic difference operators more faithful to the physics
+of the problem under investigation. Specific approaches to discretization have achieved this
+compatibility following different paths, and with diverse degrees of generality in relation to the
+problems solved and the order of accuracy obtainable. In this session advances of High Order
+Mimetic differences methods and applications will be presented with focus on
+geophysical fluids
+  </div>
+  <div class="hero-actions">
+    <a class="btn-primary" href="Materials/JCastillo_Panam2026.pdf">Slides from the Presentation</a>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2008-2024 San Diego State University Research Foundation (SDSURF)</div>
+  <div class="footer-links">
+    <a href="https://www.csrc.sdsu.edu/" target="_blank">CSRC at SDSU</a>
+    <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
+  </div>
+</footer>
+
+<script>
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.textContent = isOpen ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html>
