@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MOLE — Mimetic Operators Library Enhanced</title>
+  <link rel="icon" type="image/png" href="../Images/mole-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
@@ -12,6 +13,7 @@
 </head>
 <body>
 
+<!--<title>MOLE — Mimetic Operators Library Enhanced</title>-->
 <img src="../Images/TopBannerHome.png" 
       alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
       width="100%"/>
@@ -24,38 +26,32 @@
   <ul class="nav-links" id="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="../Gallery/gallery.html">Gallery</a></li>
+    <li><a href="#documentation">Documentation</a></li>
     <li><a href="../Events/events.html">Events</a></li>
-    <li><a href="../Documentation/documentation.html">Documentation</a></li>
     <li><a href="../Collaborators/collaborators.html">Collaborators</a></li>
     <li><a href="../Sponsors/sponsors.html">Sponsors</a></li>
   </ul>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
 </nav>
-
-<!-- Home -->
-<section id="Home">
+<!-- GALLERY -->
+<section id="documenation">
   <div class="hero">
-    <h1>MOLE Library And MOLE OSE Sponsors<br></h1>
-  </div> 
-  <center>
-    <table>
-      <tr>
-        <td style="width: 800px; background-color: #FFFFFF; text-align: center;">
-          <a href="https://www.csrc.sdsu.edu/" target="_blank">
-            <img src="../Images/SDSU_CSRC_logo.jpg" alt="Computational Science Research Center" width="100%"/></td>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td style="width: 800px; background-color: #FFFFFF; text-align: center;">
-          <a href="https://www.nsf.gov/" target="_blank">
-            <img src="../Images/NSF_logo.png" alt="National Science Foundation" width="100%"/></td>
-          </a>
-        </td>
-      </tr>
-    </table>
-  </center>
+    <div class="hero-badge">ONLINE DOCUMENTATION</div>
+    <h1>MOLE LIBRARY DOCUMENTATION</h1>
+    <p class="hero-desc">The MOLE Library has been implemented in five different 
+      programming languages that are widely used in academia and industry; C++, Python, 
+      GNU Octave/MATLAB, Julia, and Fortran.</p>
+  <p class="hero-desc">Check any of these on-line resources for specific information on a MOLE language implementation:</p>
+    <ul>
+      <li> <a href="https://mole-docs.readthedocs.io/en/" target="_blank"><p class="hero-desc">General information on the MOLE Library and the MOLE OSE</p> </a></li>
+      <li> <a href="https://mole-docs.readthedocs.io/en/main/api/cpp/index.html" target="_blank"><p class="hero-desc">MOLE C++ Documentation</p></a></li>
+      <li> <a href="https://mole-docs.readthedocs.io/en/main/api/matlab_octave/index-beta.html" target="_blank"><p class="hero-desc">MOLE GNU Octave/MATLAB Documentation</p></a></li>
+      <li> <a href="https://csrc-sdsu.github.io/MOLE.jl-docs/" target="_blank"><p class="hero-desc">MOLE.jl Documentation</p></a></li>
+    </ul>
+   </div>
 </section>
+
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-left">© 2008-2024 San Diego State University Research Foundation (SDSURF)</div>
@@ -64,24 +60,6 @@
     <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
   </div>
 </footer>
-
-<script>
-  /* ── HAMBURGER MENU ── */
-  const hamburger = document.getElementById('nav-hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger.addEventListener('click', function () {
-    const isOpen = navLinks.classList.toggle('nav-open');
-    hamburger.setAttribute('aria-expanded', isOpen);
-    hamburger.textContent = isOpen ? '✕' : '☰';
-  });
-  navLinks.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      navLinks.classList.remove('nav-open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.textContent = '☰';
-    });
-  });
-</script>
 
 </body>
 </html>
