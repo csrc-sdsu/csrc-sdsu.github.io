@@ -278,3 +278,171 @@ footer {
   section { padding: 2.5rem 1.5rem; }
   footer { padding: 1.5rem; }
 }
+
+/* MOLE Pathways Page */
+
+.pathways-page {
+    padding: 70px 8%;
+    background: #f7fafc;
+}
+
+.pathways-hero {
+    max-width: 900px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.pathways-badge,
+.pathway-label {
+    color: #168c91;
+    font-family: "DM Mono", monospace;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.pathways-hero h1 {
+    margin: 18px 0;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #172b4d;
+}
+
+.pathways-hero p {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #52606d;
+}
+
+.github-login-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 6px;
+    background: #24292f;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.github-login-button:hover {
+    background: #0969da;
+}
+
+.login-note {
+    margin-top: 15px !important;
+    font-size: 0.9rem !important;
+}
+
+.pathway-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pathway-card {
+    padding: 35px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #dfe7ed;
+    box-shadow: 0 8px 24px rgba(31, 55, 77, 0.08);
+}
+
+.pathway-card h2 {
+    margin: 15px 0;
+    font-family: "Syne", sans-serif;
+    color: #172b4d;
+    font-size: 2rem;
+}
+
+.pathway-card p,
+.pathway-card li {
+    color: #52606d;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+}
+
+.pathway-card ul {
+    padding-left: 20px;
+}
+
+.learning-card {
+    border-top: 5px solid #168c91;
+}
+
+.participation-card {
+    border-top: 5px solid #e18b3d;
+}
+
+.pathway-button {
+    margin-top: 20px;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 5px;
+    background: #e7edf1;
+    color: #687887;
+    cursor: not-allowed;
+}
+
+.pathway-levels {
+    max-width: 1100px;
+    margin: 75px auto 0;
+    text-align: center;
+}
+
+.pathway-levels h2 {
+    margin-bottom: 25px;
+    font-family: "Syne", sans-serif;
+    color: #172b4d;
+}
+
+.level-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.level {
+    padding: 22px;
+    border-radius: 8px;
+    color: white;
+}
+
+.level h3 {
+    margin-top: 0;
+    font-family: "Syne", sans-serif;
+}
+
+.level p {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+}
+
+.beginner-level {
+    background: #4d9b72;
+}
+
+.intermediate-level {
+    background: #2d7da5;
+}
+
+.advanced-level {
+    background: #7156a3;
+}
+
+@media (max-width: 800px) {
+    .pathway-cards,
+    .level-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pathways-page {
+        padding: 45px 5%;
+    }
+}
