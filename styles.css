@@ -126,11 +126,11 @@ nav {
 .stat-label { font-size: 12px; color: var(--text-muted); font-family: var(--mono); margin-top: 2px; }
 
 /* ── SECTIONS ── */
-section { padding: 2.5rem 2.5rem; }
+section { padding: 1.0rem 1.0rem; }
 /* border-bottom: 1px solid var(--border); } */
 .section-header {
   display: flex; align-items: baseline; justify-content: space-between;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 .section-header h2 {
   font-family: var(--display); font-size: 22px; font-weight: 600;
@@ -445,4 +445,32 @@ footer {
     .pathways-page {
         padding: 45px 5%;
     }
+}
+
+
+/* ── HOME: PATHWAYS TWO-COLUMN ── */
+.section-title { font-family: var(--sans); color: #265059; font-size: 32px; font-weight: 600; }
+.pathways-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.pathways-image img { width: 100%; height: auto; display: block; margin-top: 0.75rem; }
+.pathways-text {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 1.5rem 1.75rem;
+  transition: border-color 0.15s;
+}
+.pathways-text:hover { border-color: var(--border-strong); }
+.pathways-text h3 {
+  font-family: var(--display); font-size: 24px; font-weight: 600;
+  color: var(--green-dark); margin-bottom: 0.75rem;
+}
+.pathways-text p {
+  font-size: 16px; color: var(--text-muted);
+  line-height: 1.75; margin-bottom: 1rem;
+}
+@media (max-width: 800px) {
+  .pathways-intro { grid-template-columns: 1fr; gap: 1.5rem; }
 }
