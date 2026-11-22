@@ -1,0 +1,115 @@
+/* Participation Pathway page styles. */
+
+.participation-page .participation-hero {
+    padding-bottom: 40px;
+}
+
+.participation-page .participation-banner {
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.participation-page .participation-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.participation-page .participation-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1150px;
+    margin: 0 auto 60px;
+    padding: 0 35px;
+}
+
+.participation-page .participation-card {
+    min-height: 180px;
+    padding: 24px;
+    border-top: 8px solid #e88a32;
+    border-radius: 0 0 22px 22px;
+    border-left: 1px solid var(--border-strong);
+    border-right: 1px solid var(--border-strong);
+    border-bottom: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.participation-page .participation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.participation-page .participation-card h2 {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--display);
+    font-size: 1.45rem;
+    line-height: 1.35;
+    text-align: center;
+}
+
+.participation-page .contribution-card h2 {
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.participation-page .participation-card ul {
+    margin: 0;
+    padding-left: 1.3rem;
+    color: var(--text-muted);
+    font-family: var(--sans);
+    line-height: 1.45;
+}
+
+.participation-page .participation-card li {
+    margin-bottom: 4px;
+}
+
+.participation-page .participation-details {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+    padding: 0 35px;
+}
+
+.participation-page .participation-details article {
+    scroll-margin-top: 100px;
+    margin-bottom: 35px;
+    padding: 28px;
+    background: var(--surface);
+    border-left: 5px solid var(--green-mid);
+}
+
+.participation-page .participation-details h2 {
+    margin-top: 0;
+    color: var(--green-dark);
+    font-family: var(--display);
+}
+
+.participation-page .participation-details p,
+.participation-page .participation-details a {
+    font-family: var(--sans);
+}
+
+.participation-page .participation-details a {
+    color: var(--green-dark);
+    font-weight: 600;
+}
+
+@media (max-width: 850px) {
+    .participation-page .participation-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .participation-page .participation-banner {
+        max-width: 100%;
+    }
+}

@@ -8,6 +8,8 @@
 
     <link rel="icon" type="image/png" href="../Images/mole-logo.png">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="pathways.css">
+    <link rel="stylesheet" href="participation.css">
 </head>
 
 <body>
@@ -33,8 +35,6 @@
             <li><a href="../Documentation/documentation.html">Documentation</a></li>
             <li><a href="../Events/events.html">Events</a></li>
             <li><a href="pathways.html">Pathways</a></li>
-            <li><a href="../Collaborators/collaborators.html">Collaborators</a></li>
-            <li><a href="../Sponsors/sponsors.html">Sponsors</a></li>
         </ul>
 
         <button
@@ -47,26 +47,87 @@
         </button>
     </nav>
 
-    <main class="pathways-page">
+   <main class="pathways-page participation-page">
 
-        <section class="hero pathways-hero">
-            <div class="hero-badge">MOLE OSE LEARNING PATHWAY</div>
+        <section class="hero pathways-hero participation-hero">
+            <div class="hero-badge">MOLE OSE PARTICIPATION PATHWAY</div>
 
             <h1>Participation Pathways</h1>
 
             <p class="hero-desc">
-                Follow a structured path for learning how to install, understand,
-                and use the MOLE library.
+                Learn how to progress from a MOLE user to a contributor,
+                maintainer, and steward of the MOLE ecosystem.
             </p>
+
+            <div class="participation-banner">
+                <img
+                    src="../Images/banner_participation_pathways.png"
+                    alt="Progression from MOLE users to contributors to maintainers and stewards"
+                >
+            </div>
         </section>
 
-        <section class="pathway-content">
-            <h2>Content Coming Soon</h2>
+        <section class="participation-cards">
 
-            <p>
-                This pathway will contain lessons, examples, exercises, and
-                introductory activities for new MOLE users.
-            </p>
+            <a href="#organization" class="participation-card">
+                <h2>Understanding<br>the MOLE<br>Organization</h2>
+            </a>
+
+            <a href="#contribute" class="participation-card contribution-card">
+                <h2>Ways to Contribute to MOLE:</h2>
+
+                <ul>
+                    <li>Improve documentation</li>
+                    <li>Submit examples</li>
+                    <li>Submit solutions to current GitHub issues</li>
+                    <li>Participate in MOLE discussions</li>
+                </ul>
+            </a>
+
+            <a href="#leadership" class="participation-card">
+                <h2>Understanding<br>the MOLE<br>Leadership</h2>
+            </a>
+
+        </section>
+
+        <section class="participation-details">
+
+            <article id="organization">
+                <h2>Understanding the MOLE Organization</h2>
+                <p>
+                    Learn about the MOLE OSE organization, its community roles,
+                    responsibilities, and governance structure.
+                </p>
+                <a href="https://mole-docs.readthedocs.io/en/main/intros/ose_organization_wrapper.html"
+                target="_blank">
+                    Learn about the MOLE Organization →
+                </a>
+            </article>
+
+            <article id="contribute">
+                <h2>Ways to Contribute to MOLE</h2>
+                <p>
+                    Explore ways to contribute through documentation, examples,
+                    issue reports, testing, and pull requests.
+                </p>
+                <a href="https://mole-docs.readthedocs.io/en/main/intros/contributing_wrapper.html"
+                target="_blank">
+                    Learn how to contribute →
+                </a>
+            </article>
+
+            <article id="leadership">
+                <h2>Understanding the MOLE Leadership</h2>
+                <p>
+                    Learn about the roles of maintainers, leaders, and stewards
+                    within the MOLE open-source ecosystem.
+                </p>
+                <a href="https://mole-docs.readthedocs.io/en/main/intros/community_roles_wrapper.html"
+                target="_blank">
+                    Explore MOLE community roles →
+                </a>
+            </article>
+
         </section>
 
     </main>

@@ -1,3 +1,159 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOLE — Mimetic Operators Library Enhanced</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<img src="../Images/TopBannerHome.png" 
+      alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+      width="100%"/>
+
+NAV
+<nav>
+  <a href="https://mole-docs.readthedocs.io/">
+    <img src="../Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../Gallery/gallery.html">Gallery</a></li>
+    <li><a href="../Documentation/documentation.html">Documentation</a></li>
+    <li><a href="../Events/events.html">Events</a></li>
+    <li><a href="../Pathways/pathways.html">Pathways</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+</nav>
+
+Home
+<section id="Home">
+    <main id="sponsors-page" class="sponsors-page">
+
+      <section class="hero sponsors-hero">
+          <div class="hero-badge">MOLE OSE PARTNERSHIP PATHWAY</div>
+
+          <h1>Partnership Pathways</h1>
+
+          <div class="partnership-banner">
+              <img
+                  src="../Images/banner_partnership_pathways.png"
+                  alt="Sponsors and MOLE partnership membership tiers"
+              >
+          </div>
+      </section>
+
+      <section class="current-sponsors">
+          <h2>Current List of Sponsors</h2>
+
+          <div class="sponsor-list">
+
+              <a
+                  href="https://www.csrc.sdsu.edu/"
+                  target="_blank"
+                  class="sponsor-logo"
+              >
+                  <img
+                      src="../Images/SDSU_CSRC_logo.jpg"
+                      alt="San Diego State University Computational Science Research Center"
+                  >
+              </a>
+
+              <a
+                  href="https://www.nsf.gov/"
+                  target="_blank"
+                  class="sponsor-logo"
+              >
+                  <img
+                      src="../Images/NSF_logo.png"
+                      alt="National Science Foundation"
+                  >
+              </a>
+
+          </div>
+      </section>
+
+      <section class="partnership-tier-cards">
+
+          <a href="#tier1" class="partnership-tier-card">
+              <h2>MOLE<br>Partnerships<br>Tier 1</h2>
+          </a>
+
+          <a href="#tier2" class="partnership-tier-card">
+              <h2>MOLE<br>Partnerships<br>Tier 2</h2>
+          </a>
+
+          <a href="#tier3" class="partnership-tier-card">
+              <h2>MOLE<br>Partnerships<br>Tier 3</h2>
+          </a>
+
+      </section>
+
+      <section class="partnership-details">
+
+          <article id="tier1">
+              <h2>MOLE Partnerships — Tier 1</h2>
+              <p>
+                  Details about Tier 1 partnership benefits and services
+                  will be provided here.
+              </p>
+          </article>
+
+          <article id="tier2">
+              <h2>MOLE Partnerships — Tier 2</h2>
+              <p>
+                  Details about Tier 2 partnership benefits and services
+                  will be provided here.
+              </p>
+          </article>
+
+          <article id="tier3">
+              <h2>MOLE Partnerships — Tier 3</h2>
+              <p>
+                  Details about Tier 3 partnership benefits and services
+                  will be provided here.
+              </p>
+          </article>
+
+      </section>
+
+  </main>
+</section>
+FOOTER
+<footer>
+  <div class="footer-left">© 2008-2024 San Diego State University Research Foundation (SDSURF)</div>
+  <div class="footer-links">
+    <a href="https://www.csrc.sdsu.edu/" target="_blank">CSRC at SDSU</a>
+    <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
+  </div>
+</footer>
+
+<script>
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.textContent = isOpen ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +165,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
     rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../Pathways/pathways.css">
+  <link rel="stylesheet" href="../Pathways/partnership.css">
 </head>
 <body>
 
@@ -33,27 +191,96 @@
 
 <!-- Home -->
 <section id="Home">
-  <div class="hero">
-    <h1>MOLE Library And MOLE OSE Sponsors<br></h1>
-  </div> 
-  <center>
-    <table>
-      <tr>
-        <td style="width: 800px; background-color: #FFFFFF; text-align: center;">
-          <a href="https://www.csrc.sdsu.edu/" target="_blank">
-            <img src="../Images/SDSU_CSRC_logo.jpg" alt="Computational Science Research Center" width="100%"/></td>
+    <main id="sponsors-page" class="sponsors-page">
+
+      <section class="hero sponsors-hero">
+          <div class="hero-badge">MOLE OSE PARTNERSHIP PATHWAY</div>
+
+          <h1>Partnership Pathways</h1>
+
+          <div class="partnership-banner">
+              <img
+                  src="../Images/banner_partnership_pathways.png"
+                  alt="Sponsors and MOLE partnership membership tiers"
+              >
+          </div>
+      </section>
+
+      <section class="current-sponsors">
+          <h2>Current List of Sponsors</h2>
+
+          <div class="sponsor-list">
+
+              <a
+                  href="https://www.csrc.sdsu.edu/"
+                  target="_blank"
+                  class="sponsor-logo"
+              >
+                  <img
+                      src="../Images/SDSU_CSRC_logo.jpg"
+                      alt="San Diego State University Computational Science Research Center"
+                  >
+              </a>
+
+              <a
+                  href="https://www.nsf.gov/"
+                  target="_blank"
+                  class="sponsor-logo"
+              >
+                  <img
+                      src="../Images/NSF_logo.png"
+                      alt="National Science Foundation"
+                  >
+              </a>
+
+          </div>
+      </section>
+
+      <section class="partnership-tier-cards">
+
+          <a href="#tier1" class="partnership-tier-card">
+              <h2>MOLE<br>Partnerships<br>Tier 1</h2>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td style="width: 800px; background-color: #FFFFFF; text-align: center;">
-          <a href="https://www.nsf.gov/" target="_blank">
-            <img src="../Images/NSF_logo.png" alt="National Science Foundation" width="100%"/></td>
+
+          <a href="#tier2" class="partnership-tier-card">
+              <h2>MOLE<br>Partnerships<br>Tier 2</h2>
           </a>
-        </td>
-      </tr>
-    </table>
-  </center>
+
+          <a href="#tier3" class="partnership-tier-card">
+              <h2>MOLE<br>Partnerships<br>Tier 3</h2>
+          </a>
+
+      </section>
+
+      <section class="partnership-details">
+
+          <article id="tier1">
+              <h2>MOLE Partnerships — Tier 1</h2>
+              <p>
+                  Details about Tier 1 partnership benefits and services
+                  will be provided here.
+              </p>
+          </article>
+
+          <article id="tier2">
+              <h2>MOLE Partnerships — Tier 2</h2>
+              <p>
+                  Details about Tier 2 partnership benefits and services
+                  will be provided here.
+              </p>
+          </article>
+
+          <article id="tier3">
+              <h2>MOLE Partnerships — Tier 3</h2>
+              <p>
+                  Details about Tier 3 partnership benefits and services
+                  will be provided here.
+              </p>
+          </article>
+
+      </section>
+
+  </main>
 </section>
 <!-- FOOTER -->
 <footer>

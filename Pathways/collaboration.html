@@ -8,6 +8,8 @@
 
     <link rel="icon" type="image/png" href="../Images/mole-logo.png">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="pathways.css">
+    <link rel="stylesheet" href="collaboration.css">
 </head>
 
 <body>
@@ -33,8 +35,6 @@
             <li><a href="../Documentation/documentation.html">Documentation</a></li>
             <li><a href="../Events/events.html">Events</a></li>
             <li><a href="pathways.html">Pathways</a></li>
-            <li><a href="../Collaborators/collaborators.html">Collaborators</a></li>
-            <li><a href="../Sponsors/sponsors.html">Sponsors</a></li>
         </ul>
 
         <button
@@ -47,26 +47,80 @@
         </button>
     </nav>
 
-    <main class="pathways-page">
+   <main class="pathways-page collaboration-page">
 
-        <section class="hero pathways-hero">
-            <div class="hero-badge">MOLE OSE LEARNING PATHWAY</div>
+        <section class="hero pathways-hero collaboration-hero">
+            <div class="hero-badge">MOLE OSE COLLABORATION PATHWAY</div>
 
             <h1>Collaboration Pathways</h1>
 
-            <p class="hero-desc">
-                Follow a structured path for learning how to install, understand,
-                and use the MOLE library.
-            </p>
+            <div class="collaboration-banner">
+                <img
+                    src="../Images/banner_collaboration_pathways.png"
+                    alt="Progression from collaborators to CSE applications and interoperable open-source ecosystems"
+                >
+            </div>
         </section>
 
-        <section class="pathway-content">
-            <h2>Content Coming Soon</h2>
+        <section class="current-collaborations">
+            <h2>Current Collaborations</h2>
 
-            <p>
-                This pathway will contain lessons, examples, exercises, and
-                introductory activities for new MOLE users.
-            </p>
+            <div class="collaboration-table-wrapper">
+                <table class="collaboration-table">
+                    <thead>
+                        <tr>
+                            <th>Lead Collaborator</th>
+                            <th>Project(s)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#" target="_blank">Damian Rouson</a><br>
+                                Lawrence Berkeley National Laboratory
+                            </td>
+
+                            <td>
+                                Development of <em>Formal</em>, a Fortran implementation
+                                of the mimetic differences algorithms used in the MOLE Library
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="collaboration-cards">
+
+            <a href="#cse-applications" class="collaboration-card">
+                <h2>CSE Applications<br>Using MOLE</h2>
+            </a>
+
+            <a href="#interoperability" class="collaboration-card">
+                <h2>MOLE Interoperability<br>with Other Ecosystems</h2>
+            </a>
+
+        </section>
+
+        <section class="collaboration-details">
+
+            <article id="cse-applications">
+                <h2>CSE Applications Using MOLE</h2>
+                <p>
+                    This section will describe computational science and engineering
+                    applications that use MOLE operators and numerical methods.
+                </p>
+            </article>
+
+            <article id="interoperability">
+                <h2>MOLE Interoperability with Other Ecosystems</h2>
+                <p>
+                    This section will describe how MOLE works with other libraries,
+                    software ecosystems, programming languages, and research tools.
+                </p>
+            </article>
+
         </section>
 
     </main>

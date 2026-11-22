@@ -1,0 +1,83 @@
+/* Learning Pathway page styles. */
+
+.learning-page .learning-hero {
+    padding-bottom: 35px;
+}
+
+.learning-page .learning-banner {
+    width: 100%;
+    max-width: 850px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+.learning-page .learning-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.learning-page .learning-choice {
+    max-width: 680px;
+    margin: 30px auto 0;
+    padding: 18px 25px;
+    text-align: center;
+    background: #eaf4f5;
+    border-left: 5px solid var(--green-mid);
+}
+
+.learning-page .learning-choice h2 {
+    margin: 0 0 8px;
+    color: var(--green-dark);
+    font-family: var(--display);
+    font-size: 2rem;
+}
+
+.learning-page .learning-choice p {
+    margin: 0;
+    color: var(--text-muted);
+    font-family: var(--sans);
+    line-height: 1.5;
+}
+
+.learning-page .learning-levels {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 2.5rem;
+}
+
+.learning-page .learning-levels .level-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.learning-page .learning-levels .level {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learning-page .learning-levels .level:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(31, 55, 77, 0.15);
+}
+
+.learning-page .learning-levels .level span {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: var(--mono);
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .learning-page .learning-levels .level-row {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-page .learning-choice h2 {
+        font-size: 1.6rem;
+    }
+}

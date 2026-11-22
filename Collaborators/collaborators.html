@@ -1,3 +1,156 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOLE — Mimetic Operators Library Enhanced</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<img src="../Images/TopBannerHome.png" 
+      alt="Mimetic Operators Library Enhanced (MOLE) - Open-source Software Ecosystem"
+      width="100%"/>
+
+NAV
+<nav>
+  <a href="https://mole-docs.readthedocs.io/">
+    <img src="../Images/mole-logo.png" alt="MOLE Library Information" height="50"/>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../Gallery/gallery.html">Gallery</a></li>
+    <li><a href="../Documentation/documentation.html">Documentation</a></li>
+    <li><a href="../Events/events.html">Events</a></li>
+    <li><a href="../Pathways/pathways.html">Pathways</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+</nav>
+
+Home
+<section id="Home">
+  <main id="collaborators-page" class="collaborators-page">
+
+      <section class="hero collaborators-hero">
+          <div class="hero-badge">MOLE OSE COLLABORATION PATHWAY</div>
+
+          <h1>Collaboration Pathways</h1>
+
+          <p class="hero-desc">
+              Explore opportunities to collaborate with researchers,
+              developers, institutions, and other open-source ecosystems.
+          </p>
+
+          <div class="collaboration-banner">
+              <img
+                  src="../Images/banner_collaboration_pathways.png"
+                  alt="Progression from collaborators to CSE applications and interoperable ecosystems"
+              >
+          </div>
+      </section>
+
+      <section class="current-collaborations">
+          <h2>Current Collaborations</h2>
+
+          <div class="collaboration-table-wrapper">
+              <table class="collaboration-table">
+                  <thead>
+                      <tr>
+                          <th>Lead Collaborator</th>
+                          <th>Project(s)</th>
+                      </tr>
+                  </thead>
+
+                  <tbody>
+                      <tr>
+                          <td>
+                              <a href="https://profiles.lbl.gov/148652-damian-rouson"
+                                target="_blank">
+                                  Damian Rouson
+                              </a><br>
+                              Lawrence Berkeley National Laboratory
+                          </td>
+
+                          <td>
+                              Development of <em>Formal</em>, a Fortran
+                              implementation of the mimetic difference algorithms
+                              used in the MOLE Library.
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </section>
+
+      <section class="collaboration-cards">
+
+          <a href="#cse-applications" class="collaboration-page-card">
+              <h2>CSE Applications<br>Using MOLE</h2>
+          </a>
+
+          <a href="#interoperability" class="collaboration-page-card">
+              <h2>MOLE Interoperability<br>with Other Ecosystems</h2>
+          </a>
+
+      </section>
+
+      <section class="collaboration-details">
+
+          <article id="cse-applications">
+              <h2>CSE Applications Using MOLE</h2>
+              <p>
+                  This section will describe computational science and engineering
+                  applications that use MOLE operators and numerical methods.
+              </p>
+          </article>
+
+          <article id="interoperability">
+              <h2>MOLE Interoperability with Other Ecosystems</h2>
+              <p>
+                  This section will describe how MOLE works with other libraries,
+                  programming languages, software ecosystems, and research tools.
+              </p>
+          </article>
+
+      </section>
+
+  </main>
+</section>
+FOOTER
+<footer>
+  <div class="footer-left">© 2008-2024 San Diego State University Research Foundation (SDSURF)</div>
+  <div class="footer-links">
+    <a href="https://www.csrc.sdsu.edu/" target="_blank">CSRC at SDSU</a>
+    <a href="https://castillo.sdsu.edu/" target="_blank">Contact</a>
+  </div>
+</footer>
+
+<script>
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('nav-hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.textContent = isOpen ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +162,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" 
     rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../Pathways/pathways.css">
+  <link rel="stylesheet" href="../Pathways/collaboration.css">
 </head>
 <body>
 
@@ -33,30 +188,92 @@
 
 <!-- Home -->
 <section id="Home">
-  <div class="hero">
-    <h1>Current and Past MOLE OSE Collaborators<br></h1>
-  </div> 
-  <center>
-    <table style="width: 800px; background-color: #FFFFFF; text-align: left;">
-      <tr border-bottom="1px solid var(--border)">
-        <td align="left">
-          <h3>Lead Collaborator</h3>
-        </td>
-        <td alighn="left">
-          <h3>Project(s)</h3>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://profiles.lbl.gov/148652-damian-rouson">
-           Damian Rouson,</a> Lawarence Berkeley National Laboratory<br>
-        </td>
-        <td>
-           Development of <b><i>Formal</i></b>, A Fortran implementation of the mimetic differences algorithms used in the MOLE Library <br>
-        </td>
-      </tr>
-    </table>
-  </center>
+  <main id="collaborators-page" class="collaborators-page collaboration-page">
+
+      <section class="hero collaborators-hero">
+          <div class="hero-badge">MOLE OSE COLLABORATION PATHWAY</div>
+
+          <h1>Collaboration Pathways</h1>
+
+          <p class="hero-desc">
+              Explore opportunities to collaborate with researchers,
+              developers, institutions, and other open-source ecosystems.
+          </p>
+
+          <div class="collaboration-banner">
+              <img
+                  src="../Images/banner_collaboration_pathways.png"
+                  alt="Progression from collaborators to CSE applications and interoperable ecosystems"
+              >
+          </div>
+      </section>
+
+      <section class="current-collaborations">
+          <h2>Current Collaborations</h2>
+
+          <div class="collaboration-table-wrapper">
+              <table class="collaboration-table">
+                  <thead>
+                      <tr>
+                          <th>Lead Collaborator</th>
+                          <th>Project(s)</th>
+                      </tr>
+                  </thead>
+
+                  <tbody>
+                      <tr>
+                          <td>
+                              <a href="https://profiles.lbl.gov/148652-damian-rouson"
+                                target="_blank">
+                                  Damian Rouson
+                              </a><br>
+                              Lawrence Berkeley National Laboratory
+                          </td>
+
+                          <td>
+                              Development of <em>Formal</em>, a Fortran
+                              implementation of the mimetic difference algorithms
+                              used in the MOLE Library.
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </section>
+
+      <section class="collaboration-cards">
+
+          <a href="#cse-applications" class="collaboration-page-card">
+              <h2>CSE Applications<br>Using MOLE</h2>
+          </a>
+
+          <a href="#interoperability" class="collaboration-page-card">
+              <h2>MOLE Interoperability<br>with Other Ecosystems</h2>
+          </a>
+
+      </section>
+
+      <section class="collaboration-details">
+
+          <article id="cse-applications">
+              <h2>CSE Applications Using MOLE</h2>
+              <p>
+                  This section will describe computational science and engineering
+                  applications that use MOLE operators and numerical methods.
+              </p>
+          </article>
+
+          <article id="interoperability">
+              <h2>MOLE Interoperability with Other Ecosystems</h2>
+              <p>
+                  This section will describe how MOLE works with other libraries,
+                  programming languages, software ecosystems, and research tools.
+              </p>
+          </article>
+
+      </section>
+
+  </main>
 </section>
 <!-- FOOTER -->
 <footer>
